@@ -1,269 +1,464 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>إلى ملوكتي ❤️</title>
 
 <style>
-*{box-sizing:border-box}
+
+*{
+    box-sizing:border-box;
+}
 
 body{
-margin:0;
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:18px;
-background:radial-gradient(circle at top,#9b2454,#260714 60%,#070207);
-color:#fff;
-font-family:Tahoma,Arial,sans-serif;
-overflow-x:hidden
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+
+    font-family:Tahoma,Arial,sans-serif;
+
+    background:
+    radial-gradient(circle at top,#a52b5c,#350919 55%,#080207);
+
+    color:white;
+    overflow-x:hidden;
 }
 
 .card{
-width:min(94vw,540px);
-padding:22px;
-background:#ffffff12;
-border:1px solid #ffffff28;
-border-radius:30px;
-backdrop-filter:blur(15px);
-box-shadow:0 25px 80px #000b;
-text-align:center
+    width:min(94vw,550px);
+
+    padding:22px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:30px;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 25px 80px rgba(0,0,0,.6);
+
+    text-align:center;
 }
 
 .heart{
-font-size:72px;
-animation:pulse 1.1s infinite
+    font-size:70px;
+
+    animation:pulse 1.2s infinite;
 }
 
 @keyframes pulse{
-50%{transform:scale(1.18)}
+
+    50%{
+        transform:scale(1.15);
+    }
+
 }
 
 h1{
-font-size:31px;
-margin:8px 0 12px
+    font-size:32px;
+    margin:8px 0 12px;
 }
 
-input{
-width:100%;
-padding:15px;
-border-radius:15px;
-border:1px solid #ffffff30;
-background:#ffffff14;
-color:#fff;
-text-align:center;
-font-size:18px;
-outline:none
+.subtitle{
+    font-size:18px;
+    opacity:.9;
+}
+
+input[type="password"]{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    background:rgba(255,255,255,.1);
+
+    color:white;
+
+    text-align:center;
+
+    font-size:18px;
+
+    outline:none;
+
 }
 
 button{
-margin-top:14px;
-padding:14px 24px;
-border:0;
-border-radius:15px;
-background:#ff477e;
-color:#fff;
-font-weight:bold;
-font-size:17px
+
+    margin-top:14px;
+
+    padding:14px 25px;
+
+    border:0;
+
+    border-radius:15px;
+
+    background:#ff477e;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+button:hover{
+    opacity:.9;
 }
 
 #error{
-display:none;
-color:#ffb7cd
+
+    display:none;
+
+    color:#ffb6cc;
+
+    margin-top:12px;
+
 }
 
 #page{
-display:none
+    display:none;
 }
 
 .photo{
-width:100%;
-display:block;
-margin:16px 0 18px;
-border-radius:23px;
-box-shadow:0 12px 35px #0008
+
+    width:100%;
+
+    max-height:600px;
+
+    object-fit:cover;
+
+    display:block;
+
+    margin:18px 0;
+
+    border-radius:23px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.6);
+
 }
 
 .msg{
-padding:19px;
-border-radius:22px;
-background:#ffffff10;
-border:1px solid #ffffff20;
-font-size:19px;
-line-height:2.05;
-text-align:right
+
+    padding:20px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    font-size:19px;
+
+    line-height:2;
+
+    text-align:right;
+
 }
 
 .music{
-margin-top:20px;
-padding:15px;
-border-radius:22px;
-background:#ffffff10;
-border:1px solid #ffffff20
+
+    margin-top:20px;
+
+    padding:16px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
 }
 
 .music h2{
-margin:3px 0 12px;
-font-size:20px
+
+    margin:5px 0 15px;
+
+    font-size:21px;
+
 }
 
 iframe{
-width:100%;
-height:90px;
-border:0;
-border-radius:15px
+
+    width:100%;
+
+    border:0;
+
+    border-radius:15px;
+
 }
 
 .float{
-position:fixed;
-bottom:-40px;
-pointer-events:none;
-animation:up linear forwards
+
+    position:fixed;
+
+    bottom:-50px;
+
+    pointer-events:none;
+
+    animation:up linear forwards;
+
 }
 
 @keyframes up{
-to{
-transform:translateY(-115vh);
-opacity:0
+
+    to{
+
+        transform:translateY(-120vh);
+
+        opacity:0;
+
+    }
+
 }
-}
+
 </style>
+
 </head>
+
 
 <body>
 
-<!-- شاشة الباسورد -->
+
+<!-- شاشة الدخول -->
 
 <div class="card" id="lock">
 
-<div class="heart">🔐❤️</div>
+    <div class="heart">🔐❤️</div>
 
-<h1>رسالة خاصة ليكي</h1>
+    <h1>رسالة خاصة ليكي</h1>
 
-<p>في حاجة حلوة مستنياكي جوّه 💌</p>
+    <p class="subtitle">
+        في حاجة حلوة مستنياكي جوّه 💌
+    </p>
 
-<input
-id="pass"
-type="password"
-placeholder="اكتبي الباسورد">
+    <input
+        id="pass"
+        type="password"
+        placeholder="اكتبي الباسورد">
 
-<br>
+    <button onclick="openMsg()">
+        افتحي الرسالة ❤️
+    </button>
 
-<button onclick="openMsg()">
-افتحي الرسالة ❤️
-</button>
-
-<p id="error">
-الباسورد غلط 😅
-</p>
+    <p id="error">
+        الباسورد غلط 😅
+    </p>
 
 </div>
 
 
-<!-- الصفحة بعد الباسورد -->
+
+<!-- الصفحة الرئيسية -->
 
 <div class="card" id="page">
 
-<div class="heart">❤️</div>
+    <div class="heart">❤️</div>
 
-<h1>إلى ملوكتي ❤️</h1>
+    <h1>إلى ملوكتي ❤️</h1>
 
-<p>من قلبي ليكي… 🌍</p>
-
-
-<!-- الصورة مدمجة داخل الموقع -->
-
-<img
-class="photo"
-src="data:image/jpeg;base64,ضع_بيانات_الصورة_هنا"
-alt="صورتنا ❤️">
+    <p class="subtitle">
+        من قلبي ليكي… 🌍
+    </p>
 
 
-<!-- الرسالة -->
+    <!-- الصورة -->
 
-<div class="msg">
+    <!--
+    مهم:
+    ارفع الصورة على GitHub
+    وليكن اسمها:
+    love.jpg
 
-انا بحبك اوي يملوكتي وبجد بحبك جدا ومقدرش اعيش من غيرك
-ويحد انا عاوزك وم هبعد عنك ومتزعليش مني وسمحيني بحد
-انا بحبك اووووووووي ❤️🌍
+    وبعدها سيب السطر ده كما هو
+    -->
+
+    <img
+        src="love.jpg"
+        class="photo"
+        alt="صورتنا ❤️">
+
+
+    <!-- الرسالة -->
+
+    <div class="msg">
+
+        انا بحبك اوي يملوكتي ❤️
+
+        <br>
+
+        وبجد بحبك جدا ومقدرش اعيش من غيرك.
+
+        <br>
+
+        ومش عاوز أبعد عنك أبداً.
+
+        <br>
+
+        ومتزعليش مني وسمحيني ❤️
+
+        <br>
+
+        انا بحبك اووووووووي 🌍❤️
+
+    </div>
+
+
+    <!-- الأغنية -->
+
+    <div class="music">
+
+        <h2>
+            🎵 أغنيتنا ❤️
+        </h2>
+
+        <iframe
+            height="90"
+            src="https://www.youtube.com/embed/QHC-9PGT5ZQ"
+            title="أغنيتنا ❤️"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+
+    </div>
 
 </div>
 
-
-<!-- الأغنية داخل الموقع -->
-
-<div class="music">
-
-<h2>🎵 أغنيتنا ❤️</h2>
-
-<iframe
-src="https://www.youtube.com/embed/Qql25KzCDbk"
-title="TUL8TE"
-allow="autoplay; encrypted-media; picture-in-picture"
-allowfullscreen>
-</iframe>
-
-</div>
-
-</div>
 
 
 <script>
 
+
+/* الباسورد */
+
 function openMsg(){
 
-let pass =
-document.getElementById("pass")
-.value.trim()
-.toLowerCase();
+    let pass =
+        document
+        .getElementById("pass")
+        .value
+        .trim()
+        .toLowerCase();
 
-if(pass==="love"){
 
-document.getElementById("lock")
-.style.display="none";
+    /*
+    الباسورد الحالي:
+    love
 
-document.getElementById("page")
-.style.display="block";
+    لو عايز تغيره:
+    غير كلمة love هنا
+    */
 
-setInterval(function(){
+    if(pass === "love"){
 
-let h=document.createElement("div");
+        document
+        .getElementById("lock")
+        .style.display = "none";
 
-h.className="float";
 
-h.textContent=
-["❤️","💕","💗","💖","💘"]
-[Math.floor(Math.random()*5)];
+        document
+        .getElementById("page")
+        .style.display = "block";
 
-h.style.left=
-Math.random()*100+"vw";
 
-h.style.fontSize=
-(20+Math.random()*28)+"px";
+        createHearts();
 
-h.style.animationDuration=
-(5+Math.random()*5)+"s";
+    }
 
-document.body.appendChild(h);
+    else{
 
-setTimeout(function(){
-h.remove();
-},10000);
+        document
+        .getElementById("error")
+        .style.display = "block";
 
-},450);
-
-}else{
-
-document.getElementById("error")
-.style.display="block";
+    }
 
 }
 
+
+
+/* قلوب متحركة */
+
+function createHearts(){
+
+    setInterval(function(){
+
+        let heart =
+            document.createElement("div");
+
+
+        heart.className = "float";
+
+
+        heart.textContent =
+            ["❤️","💕","💗","💖","💘"]
+            [
+                Math.floor(
+                    Math.random()*5
+                )
+            ];
+
+
+        heart.style.left =
+            Math.random()*100 + "vw";
+
+
+        heart.style.fontSize =
+            (20 + Math.random()*28) + "px";
+
+
+        heart.style.animationDuration =
+            (5 + Math.random()*5) + "s";
+
+
+        document
+        .body
+        .appendChild(heart);
+
+
+        setTimeout(function(){
+
+            heart.remove();
+
+        },10000);
+
+
+    },450);
+
 }
+
+
+/* السماح بالضغط Enter للباسورد */
+
+document
+.getElementById("pass")
+.addEventListener("keydown",function(event){
+
+    if(event.key === "Enter"){
+
+        openMsg();
+
+    }
+
+});
 
 </script>
 
+
 </body>
+
 </html>
